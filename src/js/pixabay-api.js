@@ -1,0 +1,1 @@
+getImagesByQuery(query)
