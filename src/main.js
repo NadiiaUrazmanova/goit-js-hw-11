@@ -32,9 +32,8 @@ function createGalleryByQuery() {
 
         getImagesByQuery(query)
             .then(data => {
-                const images = data.hits;
-
-            if(images.length === 0) {
+                
+            if(data.hits.length === 0) {
             iziToast.error({
                 title: 'Error',
                 message: 'Sorry, there are no images matching your search query. Please try again!',
@@ -42,7 +41,7 @@ function createGalleryByQuery() {
             });
         }
             else {
-                createGallery(images);
+                createGallery(data.hits);
             }
             })
         .catch(error => {

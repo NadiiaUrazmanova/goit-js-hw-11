@@ -13,7 +13,7 @@ export function getImagesByQuery(query) {
     });
     return axios
         .get(`https://pixabay.com/api/?${searchParams}`)
-        .then(response => response.data.hits)
+        .then(response => response.data)
         .catch(error => {
             iziToast.error({
                 title: 'Error',
