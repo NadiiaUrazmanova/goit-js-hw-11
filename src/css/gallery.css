@@ -71,7 +71,7 @@
     border: 5px solid #4E75FF;
     border-bottom-color: transparent;
     border-radius: 50%;
-    display: inline-block;
+    display: none;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
 }
