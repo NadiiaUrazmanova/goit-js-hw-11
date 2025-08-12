@@ -42,7 +42,7 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  loaderEl.style.display = 'flex';
+  loaderEl.style.display = 'inline-block';
 }
 
 export function hideLoader() {
