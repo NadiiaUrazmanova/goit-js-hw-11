@@ -1,10 +1,9 @@
-import '../css/styles_loader.css';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const galleryEl = document.querySelector(".gallery");
-const loaderWrapper = document.querySelector('.loader-wrapper');
-let lightbox; // объявляем сразу, чтобы было видно всем функциям
+const loaderEl = document.querySelector('.loader');
+let lightbox; 
 
 export function createGallery(images) {
   const markup = images.map(image => `
@@ -26,7 +25,7 @@ export function createGallery(images) {
     </li>
   `).join('');
 
-  galleryEl.innerHTML = markup; // можно заменить на insertAdjacentHTML для добавления
+  galleryEl.innerHTML = markup; 
 
   if (!lightbox) {
     lightbox = new SimpleLightbox('.gallery a', {
@@ -43,9 +42,9 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  loaderWrapper.style.display = 'flex';
+  loaderEl.style.display = 'flex';
 }
 
 export function hideLoader() {
-  loaderWrapper.style.display = 'none';
+  loaderEl.style.display = 'none';
 }

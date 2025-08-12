@@ -1,5 +1,6 @@
 .form {
     margin: 0 auto;
+    max-width: 371px;    
     margin-top: 36px;
     margin-bottom: 32px;
     display: flex;
@@ -8,7 +9,7 @@
 }
 
 .input {
-    min-width: 272px;
+    min-width: 272px;    
     min-height: 40px;
     border: 1px solid #808080;
     border-radius: 4px;
@@ -19,6 +20,7 @@
 .input:hover, .input:focus {
     border-color: #000000;
 }
+
 
 
 .button {
@@ -33,7 +35,7 @@
     background-color: #6C8CFF;
 }
 
-.gallery {
+.gallery {    
     max-width: 1128px;
     display: flex;
     flex-direction: row;
@@ -43,21 +45,14 @@
 }
 
 .gallery-item {
-    min-width: 360px;
+    min-width: 358px;
     min-height: 200px;
     flex-basis: calc((100% - 360px * 3) / 48);
-    border-color: #808080;
+    border: 1px solid #808080;
     display: flex;
     flex-direction: column;
 }
-/* 
-.gallery-link {
 
-}
-
-.gallery-image {
-
-} */
 
 .gallery-info {
     display: flex;
@@ -68,17 +63,25 @@
 
 .gallery-info>p {
     text-align: center;
-
-}
-
-.sl-overlay {
-    background-color: #fff !important;
-}
-
-/* .loader-wrapper {
-
 }
 
 .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
 
-} */
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
